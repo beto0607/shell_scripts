@@ -102,6 +102,9 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+nmap <leader><Enter> o<ESC>
+nmap <leader>O O<ESC>
+
 nnoremap <C-p> :GFiles<CR>
 noremap <F3> :Autoformat<CR>
 
@@ -122,5 +125,7 @@ let g:asyncrun_open = 6
 
 let g:coc_global_extensions = [ 'coc-tsserver' ]
 setlocal indentkeys+=0
-autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript\ --single-quote
+autocmd FileType html setlocal formatprg=prettier\ --parser\ html
+autocmd FileType css setlocal formatprg=prettier\ --parser\ css 
 
