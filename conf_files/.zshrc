@@ -133,3 +133,6 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Ho
 alias "runDV=ELECTRON_ENABLE_LOGGING=1 npm run start:dev -- --remote-debugging-port=9222"
 alias "vim=/usr/local/Cellar/vim/8.2.2000/bin/vim"
 export TERM=xterm-256color
+
+alias "dv-inspelning=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/inspelning"
+alias "dv-import=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/import"
