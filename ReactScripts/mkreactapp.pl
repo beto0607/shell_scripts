@@ -36,6 +36,8 @@ mkdir("src/layout");
 mkdir("src/scss_common");
 mkdir("src/actions");
 mkdir("src/types");
+mkdir("src/store");
+mkdir("src/reducers");
 mkdir("src/utils");
 
 print "Finished.\nEnjoy!\n";
