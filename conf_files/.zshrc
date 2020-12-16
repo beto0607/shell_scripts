@@ -136,3 +136,5 @@ export TERM=xterm-256color
 
 alias "dv-inspelning=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/inspelning"
 alias "dv-import=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/import"
+alias "dv-troubleshoot=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/felsok"
+
