@@ -23,14 +23,13 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -45,6 +44,9 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -68,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,7 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:$HOME/.local/bin
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH="$PATH:$HOME/.local/bin:$PYENV_ROOT/bin"
 
 PATH="/home/beto0607/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/beto0607/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -109,22 +113,28 @@ PERL_MM_OPT="INSTALL_BASE=/home/beto0607/perl5"; export PERL_MM_OPT;
 NPM_PACKAGES="${HOME}/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
-export ANDROID_SDK_ROOT="/home/beto0607/Android/Sdk"
-export ANDROID_HOME="/home/beto0607/Android/Sdk"
-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.fc32.x86_64"
-PATH="$NPM_PACKAGES/bin:$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_STUDIO="$HOME/Android/android-studio"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+PATH="$NPM_PACKAGES/bin:$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_STUDIO/bin"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 
 alias "xC=xclip"
 alias "xc=xclip -selection clipboard"
 alias "xv=xclip -o"
-alias "..ls=cd .. && ls"
-alias "runDV=ELECTRON_ENABLE_LOGGING=1 npm run start:dev -- --remote-debugging-port=9222"
+alias "emuPixel=~/Android/Sdk/emulator/emulator @Pix"
+
 
 export TERM=xterm-256color
+
+source /home/beto0607/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(pyenv init -)"
 
