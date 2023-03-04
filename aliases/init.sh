@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-source ./git_aliases.sh
-source ./shell_aliases.sh
+source "$(dirname $0)/git_aliases.sh"
+source "$(dirname $0)/shell_aliases.sh"
