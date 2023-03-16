@@ -20,6 +20,8 @@ alias acg_dev="cd $STUDIO_PATH/apps/acg;npm run start:dev"
 alias acg_build="cd $STUDIO_PATH;npm run build:acg+scripts"
 alias acg_build_start="cd $STUDIO_PATH;npm run build:acg+scripts && npm run start:acg"
 alias acg_run="cd $STUDIO_PATH;npm run start:acg"
+# -- test
+alias npm_test_ng="npm run test:ng -- --watch --silent=false"
 
 # VS-CODE
 alias code.="code ."

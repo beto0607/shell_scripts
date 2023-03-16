@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+HOSTS_FILE_PATH="/mnt/c/Windows/System32/drivers/etc/hosts"
+
+
+IP_INFO="$(eval 'ip address | grep "eth0" | grep -oP "(([0-9.]{3}){5})\/"')";
+IP_INFO="${IP_INFO: : -1}";
+
+if [ ! -z "$(eval "grep $IP_INFO $HOSTS_FILE_PATH")" ]
+then
+    echo "IP already there, ignoring"
+    return; 
+fi;
+
+echo "Adding $IP_INFO to hosts file"; 
+
+echo "$IP_INFO studio-client" >> $HOSTS_FILE_PATH
