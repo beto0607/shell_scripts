@@ -23,14 +23,13 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -45,6 +44,9 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -98,20 +100,46 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+<<<<<<< HEAD
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source /Users/beto0607/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+=======
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH="$PATH:$HOME/.local/bin:$PYENV_ROOT/bin"
+
+PATH="/home/beto0607/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/beto0607/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/beto0607/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/beto0607/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/beto0607/perl5"; export PERL_MM_OPT;
+>>>>>>> origin/master
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 
+<<<<<<< HEAD
 export PATH=$PATH:/usr/local/mysql-5.7.28-macos10.14-x86_64/bin:/Users/beto0607/Library/Python/3.8/bin:$NPM_PACKAGES/bin
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+=======
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_STUDIO="$HOME/Android/android-studio"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+PATH="$NPM_PACKAGES/bin:$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_STUDIO/bin"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+>>>>>>> origin/master
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 PATH="/Users/beto0607/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/beto0607/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -137,4 +165,12 @@ export TERM=xterm-256color
 alias "dv-inspelning=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/inspelning"
 alias "dv-import=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/import"
 alias "dv-troubleshoot=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/felsok"
+alias "xC=xclip"
+alias "xc=xclip -selection clipboard"
+alias "xv=xclip -o"
+alias "emuPixel=~/Android/Sdk/emulator/emulator @Pix"
+
+
+source /home/beto0607/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(pyenv init -)"
 
