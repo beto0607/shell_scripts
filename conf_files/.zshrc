@@ -2,17 +2,17 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/beto0607/.oh-my-zsh"
+export ZSH="/Users/beto0607/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -32,7 +32,7 @@ ZSH_THEME="robbyrussell"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -66,8 +66,8 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
@@ -100,6 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+<<<<<<< HEAD
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /Users/beto0607/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+=======
 export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH="$PATH:$HOME/.local/bin:$PYENV_ROOT/bin"
@@ -109,10 +115,18 @@ PERL5LIB="/home/beto0607/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5
 PERL_LOCAL_LIB_ROOT="/home/beto0607/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/beto0607/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/beto0607/perl5"; export PERL_MM_OPT;
+>>>>>>> origin/master
 
 NPM_PACKAGES="${HOME}/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
+<<<<<<< HEAD
+export PATH=$PATH:/usr/local/mysql-5.7.28-macos10.14-x86_64/bin:/Users/beto0607/Library/Python/3.8/bin:$NPM_PACKAGES/bin
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+=======
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_STUDIO="$HOME/Android/android-studio"
@@ -122,18 +136,40 @@ PATH="$NPM_PACKAGES/bin:$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$
 # command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+>>>>>>> origin/master
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+PATH="/Users/beto0607/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/beto0607/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/beto0607/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/beto0607/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/beto0607/perl5"; export PERL_MM_OPT;
+export MIGR_DB_PATH=/Users/beto0607/Nuna/db.sql;
+export PYTHONPATH=${PYTHONPATH}:/Users/beto0607/Migratie/bd-migratie-core/lib/python;
 
+export ANDROID_HOME='/Users/beto0607/Library/Android/sdk';
+export ANDROID_SDK_ROOT=$ANDROID_HOME;
+
+export GRAILS_HOME=$HOME/Grails/grails-4.0.2
+
+export PATH="$PATH:$HOME/Flutter/flutter/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$GRAILS_HOME/bin"
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
+
+alias "runDV=ELECTRON_ENABLE_LOGGING=1 npm run start:dev -- --remote-debugging-port=9222"
+alias "vim=/usr/local/Cellar/vim/8.2.2000/bin/vim"
+export TERM=xterm-256color
+
+alias "dv-inspelning=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/inspelning"
+alias "dv-import=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/import"
+alias "dv-troubleshoot=curl -X POST http://127.0.0.1:4491/mediaapp/api/v1/felsok"
 alias "xC=xclip"
 alias "xc=xclip -selection clipboard"
 alias "xv=xclip -o"
 alias "emuPixel=~/Android/Sdk/emulator/emulator @Pix"
 
-
-export TERM=xterm-256color
 
 source /home/beto0607/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(pyenv init -)"
