@@ -18,6 +18,8 @@
 
 ### GIT:
 `<leader>gs`    => Git  
+`<leader>gS`    => Git status  
+`<leader>gps`   => Git push   
 
 
 ### Harpoon:
