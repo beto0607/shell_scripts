@@ -1,4 +1,0 @@
-#!/bin/zsh
-
-bluetoothctl connect 14:3F:A6:90:EE:50
-

@@ -3,7 +3,7 @@
 export STUDIO_PATH="$HOME/Studio";
 
 
-alias vim="nvim"
+#alias vim="nvim"
 # NPM/NODE
 alias kill_npm="kill \$(ps aux | grep 'node' | awk '{print $1}')"
 alias lint="npm run lint"
@@ -28,4 +28,6 @@ alias code.="code ."
 alias code_studio="code $STUDIO_PATH"
 
 
+alias :q="exit"
+alias :qa="exit"
 
