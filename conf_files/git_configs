@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+
+echo "Set aliases"
+source ../aliases/git_aliases.sh
+
+echo "Set global configs"
+
+git config --global core.editor nvim
+git config --global user.name "Roberto Albanesi"
+git config --global user.email "beto0607@gmail.com"
+
