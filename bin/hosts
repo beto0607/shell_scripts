@@ -1,0 +1,16 @@
+127.0.0.1	localhost
+127.0.1.1	beto0607-OMEN-Laptop-15-en1xxx
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
+# BANNERFLOW
+#127.0.0.1 studio.bannerflow.local
+#192.168.8.155 idp.bannerflow.local
+127.0.0.1 sandbox-studio.bannerflow.com
