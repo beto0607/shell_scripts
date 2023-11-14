@@ -13,7 +13,7 @@ alias lint="npm run lint"
 # -- app 
 alias npm_watch="cd $STUDIO_PATH; npm run watch"
 alias npm_start="cd $STUDIO_PATH; sleep 45 && npm run start"
-alias npm_watch_dev="cd $STUDIO_PATH; npx nx run studio:watch:remote-dev"
+alias npm_watch_dev="cd $STUDIO_PATH; npx nx run studio:build:remote-dev --watch"
 alias npm_start_dev="cd $STUDIO_PATH;export ENABLE_SSL=true; sleep 45 && npm run start"
 alias npm_build_scripts="cd $STUDIO_PATH;npm run build:scripts -- --watch"
 alias npm_acg="cd $STUDIO_PATH;npm run start:acg"
