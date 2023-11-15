@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 export STUDIO_PATH="$HOME/Studio";
-export COMPOSEINFRA_PATH="$HOME/Bannerflow/ComposeInfra";
+export COMPOSEINFRA_PATH="$HOME/ComposeInfra";
 
 
 #alias vim="nvim"
