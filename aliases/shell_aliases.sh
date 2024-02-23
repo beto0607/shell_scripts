@@ -19,7 +19,10 @@ alias npm_test_ng="npm run test:ng -- --watch --silent=false"
 alias code.="code ."
 alias code_studio="code $STUDIO_PATH"
 
-
+# Shell 
 alias :q="exit"
 alias :qa="exit"
 
+
+# NVIM
+alias nvim_config="cd ~/.config/nvim/; nvim ."
