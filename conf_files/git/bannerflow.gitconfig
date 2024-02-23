@@ -1,7 +1,7 @@
 [user]
     name = Roberto Albanesi
     email = roberto.albanesi@bannerflow.com
-    signingkey = ~/.ssh/bf_key.pub
+    signingkey = ~/.ssh/bannerflow_rsa.pub
 
 [commit]
     gpgsign = true

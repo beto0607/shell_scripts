@@ -1,3 +1,6 @@
+[user]
+	email = beto0607@gmail.com
+	name = Roberto Albanesi
 [alias]
 	s = status
 	co = checkout
@@ -14,23 +17,15 @@
 	resoft = reset --soft HEAD~1
 	spush = stash push
 	spop = stash pop
-	sdrop = stash drop
 	sl = stash list
-
 [core]
-	editor = nvim
-
-[user]
-	name = Roberto Albanesi
-	email = beto0607@gmail.com
-
+	editor = vim
 [init]
 	defaultBranch = main
 
 [maintenance]
     auto = false
     strategy = incremental
-	repo = /home/beto0607/Bannerflow/Studio
 
 [includeIf "gitdir:~/Bannerflow/"]
-    path = ~/Bannerflow/.gitconfig
+    path = ~/.config/git/bannerflow.gitconfig
