@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+cd ~/Bannerflow/remote-compose-infra
+docker compose -f docker-compose-linux.yml up -d

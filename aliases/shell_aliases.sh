@@ -8,7 +8,7 @@ alias lint="npm run lint"
 
 # STUDIO
 # -- app 
-alias studio_start_dev="cd $STUDIO_PATH; npx nx run studio:serve:remote-dev"
+alias studio_start_dev="cd $STUDIO_PATH; npx nx run studio:serve:remote"
 alias studio_build_scripts="cd $STUDIO_PATH; npm run build:scripts -- --watch"
 # -- acg
 alias acg_start_dev="cd $STUDIO_PATH; npx nx run acg:serve:development"
