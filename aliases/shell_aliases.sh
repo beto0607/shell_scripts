@@ -25,4 +25,12 @@ alias :qa="exit"
 
 
 # NVIM
+if [ ! -L "~/.config/nvim/"]; then
+echo ""
+    #rm -rf ~/.config/nvim/
+    ln -s ~/Beto/nvim-configs/ ~/.config/nvim
+fi
 alias nvim_config="cd ~/.config/nvim/; nvim ."
+
+# TMUX
+alias tmux_config="cd ~/.config/tmux/; nvim ."

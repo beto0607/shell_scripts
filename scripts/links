@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+BETO_PATH="$HOME/Beto"
+
+# NVIM
+nvim_config_repo="$BETO_PATH/nvim-configs"
+nvim_config_path="$HOME/.config/nvim"
+if [ ! -L ${nvim_config_path} ]; then
+    echo "nvim config doesn't exist"
+    ln -s ${nvim_config_repo} ${nvim_config_path}
+fi
+
+# TMUX
+tmux_config_repo="$BETO_PATH/shell_scripts/conf_files/tmux"
+tmux_config_path="$HOME/.config/tmux"
+if [ ! -L ${tmux_config_path} ]; then
+    echo "nvim config doesn't exist"
+    ln -s ${tmux_config_repo} ${tmux_config_path}
+fi
